@@ -1,0 +1,55 @@
+f=function(glycemie,shakiness,hunger,sweating,headach,diabetic_parents,pale,urination,thirst,blurred_vision,dry_mouth,smelling_breath,shortness_of_breath)
+{
+  op = c()
+  temp = 1
+  if (glycemie > 10)
+  {
+    op[temp] = "Warning! High blood sugar"
+    temp = temp+1
+  }
+  if(glycemie < 4)
+  {
+    op[temp] = "Warning! Low blood sugar"
+    temp = temp+1
+  }
+  
+  if(shakiness == 'True' & hunger == 'True' & sweating == 'True' & headache == 'True' & pale == 'True' & diabetic_parents == 'True')
+  {
+    op[temp] = "Warning!Child could be diabetic"
+    temp = temp+1
+  }
+  if(shakiness == 'True' & hunger == 'True' & sweating == 'True' & headache == 'True' & pale == 'True' & glycemie <4 )
+  {
+    op[temp] = "Alert! High risk of diabetes, you must see a doctor"
+    temp = temp+1
+  }
+  if(urination == 'True' & thirst == 'True' & blurred_vision == 'True' & dry_mouth == 'True' & smelling_breath == 'True' & shortness_of_breath == 'True' & diabetic_parents == 'True')
+  {
+    op[temp] = "Warning!Child could be diabetic" 
+    temp = temp+1
+  }
+  if (urination == 'True' & thirst == 'True' & blurred_vision == 'True' & dry_mouth == 'True' & smelling_breath == 'True' & shortness_of_breath == 'True' & glycemie>10)
+  {
+    op[temp] = "Alert! High risk of diabetes, you must see a doctor"
+    temp = temp+1
+  }
+  return(unique((op)))
+}
+
+glycemie=12
+shakiness= 'True' 
+hunger= 'True'
+sweating= 'True' 
+headache= 'True'
+pale= 'True'
+diabetic_parents = 'True'
+urination = 'True'
+thirst = 'True'
+blurred_vision = 'True'
+dry_mouth = 'True'
+smelling_breath = 'True'
+shortness_of_breath = 'True'
+output = f(glycemie,shakiness,hunger,sweating,headach,diabetic_parents,pale,urination,thirst,blurred_vision,dry_mouth,smelling_breath,shortness_of_breath)
+output
+
+
