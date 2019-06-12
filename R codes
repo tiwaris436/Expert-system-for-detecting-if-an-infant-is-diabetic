@@ -36,3 +36,25 @@ f=function(glycemie,shakiness,hunger,sweating,headach,diabetic_parents,pale,urin
   return(unique((op)))
 }
 
+#Assign values to variables
+
+glycemie=12
+shakiness= 'True' 
+hunger= 'True'
+sweating= 'True' 
+headache= 'True'
+pale= 'True'
+diabetic_parents = 'False'
+urination = 'True'
+thirst = 'True'
+blurred_vision = 'True'
+dry_mouth = 'True'
+smelling_breath = 'True'
+shortness_of_breath = 'True'
+
+
+#Output 
+output = f(glycemie,shakiness,hunger,sweating,headach,diabetic_parents,pale,urination,thirst,blurred_vision,dry_mouth,smelling_breath,shortness_of_breath)
+output
+
+'Warning! High blood sugar' 'Alert! High risk of diabetes, you must see a doctor'
